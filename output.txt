@@ -1,0 +1,38 @@
+ <class 'dict'>{
+ 'time': '2019-01-07 12:53:23',
+ 'model': 'Fine Offset Electronics WH1080/WH3080 Weather Station',
+ 'msg_type': 0,
+ 'id': 50,
+ 'temperature_C': 10.2,
+ 'humidity': 73,
+ 'direction_str': 'N',
+ 'direction_deg': '0',
+ 'speed': 1.224,
+ 'gust': 2.448,
+ 'rain': 406.2,
+ 'battery': 'OK
+ }
+
+
+ ['2018-12-06', '15:08:37', ':Fine', 'Offset', 'Electronics', 'WH1080/WH3080', 'Weather', 'Station']
+ ['Msg', 'type:', '0']
+ ['Station', 'ID:', '50']
+ ['Temperature:', '13.0', 'C']
+ ['Humidity:', '75', '%']
+ ['Wind', 'string:', 'NE']
+ ['Wind', 'degrees:', '45']
+ ['Wind', 'avg', 'speed:', '3.67']
+ ['Wind', 'gust:', '7.34']
+ ['Total', 'rainfall:', '352.2']
+ ['Battery:', 'OK']
+ ['2018-12-06', '15:08:40', ':Fine', 'Offset', 'Electronics,', 'WH2', 'Temperature/Humidity', 'sensor']
+ ['ID:', '211']
+ ['Temperature:', '13.4', 'C']
+ ['Humidity:', '84', '%']
+ ['Integrity:', 'CRC']
+
+2017-12-19 15:06:43,021 - Logger - INFO - Text info
+2017-12-19 15:06:43,021 - Logger - DEBUG - Text debug
+2017-12-19 15:06:43,022 - Logger - WARNING - Text warning
+2017-12-19 15:06:43,022 - Logger - ERROR - Text error
+2017-12-19 15:06:43,022 - Logger - CRITICAL - Text critical
