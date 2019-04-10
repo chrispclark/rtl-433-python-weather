@@ -4,7 +4,7 @@ from sqlalchemy import Column, Date, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
 
-engine = create_engine('sqlite:///weather.db', echo=True)
+engine = create_engine('sqlite:///weather.db', echo=False)
 Base = declarative_base()
 
 from loguru import logger

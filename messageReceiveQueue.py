@@ -6,26 +6,29 @@ class RunIt():
     def __init__(self):
         pass
 
+    @property
     def StartUp(self):
         connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
         self.result = 0
         channel = connection.channel()
         channel_name = channel.queue_declare(queue='rtl-433')
         method_frame, header_frame, body = channel.basic_get(queue='rtl-433')
-        logger.info("Data: " + str(method_frame), str(header_frame), str(body))
+        #logger.info("Data: " + str(method_frame) + "Header: " + str(header_frame) + "Body: " + str(body))
         try:
             if method_frame.NAME == 'Basic.GetEmpty':
+                logger.warning("Empty")
                 print("Closed")
                 connection.close()
                 return('Empty')
             else:
-                print("Summit")
+                logger.warning("Not Empty")
                 channel.basic_ack(delivery_tag=method_frame.delivery_tag)
                 message = CleanData.massageData(self, body)
+               #print("Message: " + str(message))
                 connection.close()
                 return(message)
         except  Exception as e:
-            print("Error creating pika blocking connection: " + str(e))
+            logger.warning("Error creating pika blocking connection: " + str(e))
             return("Failed")
         
         def callback(ch, method, properties, body):
@@ -53,6 +56,8 @@ def main():
     z = RunIt()
     y = z.MessageCount()
     logger.info("MQ Queue: " + str(y))
+    z = z.StartUp
+    print(z)
 
 if __name__ == '__main__':
     main()

@@ -2,40 +2,41 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.12.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1122, 711)
+        MainWindow.resize(1122, 911)
         MainWindow.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedKingdom))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.textEdit_Log = QtWidgets.QTextEdit(self.centralwidget)
-        self.textEdit_Log.setGeometry(QtCore.QRect(10, 250, 1101, 301))
+        self.textEdit_Log.setGeometry(QtCore.QRect(10, 230, 1101, 171))
         self.textEdit_Log.setReadOnly(True)
         self.textEdit_Log.setObjectName("textEdit_Log")
         self.pushButton_Start = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_Start.setGeometry(QtCore.QRect(10, 640, 80, 22))
+        self.pushButton_Start.setGeometry(QtCore.QRect(0, 840, 80, 22))
         self.pushButton_Start.setObjectName("pushButton_Start")
         self.pushButton_Quit = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_Quit.setGeometry(QtCore.QRect(1030, 640, 80, 22))
+        self.pushButton_Quit.setGeometry(QtCore.QRect(1020, 840, 80, 22))
         self.pushButton_Quit.setObjectName("pushButton_Quit")
         self.lcdNumberTemperature = QtWidgets.QLCDNumber(self.centralwidget)
         self.lcdNumberTemperature.setGeometry(QtCore.QRect(440, 60, 131, 51))
         self.lcdNumberTemperature.setObjectName("lcdNumberTemperature")
         self.labelTime = QtWidgets.QLabel(self.centralwidget)
-        self.labelTime.setGeometry(QtCore.QRect(10, 20, 101, 51))
+        self.labelTime.setGeometry(QtCore.QRect(10, 20, 261, 51))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.labelTime.setFont(font)
         self.labelTime.setObjectName("labelTime")
         self.lcdNumberDirectionDeg = QtWidgets.QLCDNumber(self.centralwidget)
-        self.lcdNumberDirectionDeg.setGeometry(QtCore.QRect(310, 190, 131, 51))
+        self.lcdNumberDirectionDeg.setGeometry(QtCore.QRect(310, 170, 131, 51))
         self.lcdNumberDirectionDeg.setObjectName("lcdNumberDirectionDeg")
         self.lcdNumberGust = QtWidgets.QLCDNumber(self.centralwidget)
         self.lcdNumberGust.setGeometry(QtCore.QRect(760, 60, 131, 51))
@@ -86,10 +87,10 @@ class Ui_MainWindow(object):
         self.labelRain.setFont(font)
         self.labelRain.setObjectName("labelRain")
         self.lcdNumberRain = QtWidgets.QLCDNumber(self.centralwidget)
-        self.lcdNumberRain.setGeometry(QtCore.QRect(480, 190, 131, 51))
+        self.lcdNumberRain.setGeometry(QtCore.QRect(480, 170, 131, 51))
         self.lcdNumberRain.setObjectName("lcdNumberRain")
         self.lcdNumberCounter = QtWidgets.QLCDNumber(self.centralwidget)
-        self.lcdNumberCounter.setGeometry(QtCore.QRect(300, 590, 131, 51))
+        self.lcdNumberCounter.setGeometry(QtCore.QRect(290, 790, 131, 51))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -103,14 +104,31 @@ class Ui_MainWindow(object):
         self.lcdNumberCounter.setPalette(palette)
         self.lcdNumberCounter.setObjectName("lcdNumberCounter")
         self.lcdNumberMessageCount = QtWidgets.QLCDNumber(self.centralwidget)
-        self.lcdNumberMessageCount.setGeometry(QtCore.QRect(700, 600, 131, 51))
+        self.lcdNumberMessageCount.setGeometry(QtCore.QRect(690, 800, 131, 51))
         self.lcdNumberMessageCount.setObjectName("lcdNumberMessageCount")
         self.labelDirectionCounter = QtWidgets.QLabel(self.centralwidget)
-        self.labelDirectionCounter.setGeometry(QtCore.QRect(290, 550, 191, 51))
+        self.labelDirectionCounter.setGeometry(QtCore.QRect(280, 750, 191, 51))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.labelDirectionCounter.setFont(font)
         self.labelDirectionCounter.setObjectName("labelDirectionCounter")
+        self.graphicsViewTemperature = PlotWidget(self.centralwidget)
+        self.graphicsViewTemperature.setGeometry(QtCore.QRect(10, 410, 611, 211))
+        self.graphicsViewTemperature.setObjectName("graphicsViewTemperature")
+        self.graphicsView_Direction = PlotWidget(self.centralwidget)
+        self.graphicsView_Direction.setGeometry(QtCore.QRect(630, 410, 471, 361))
+        self.graphicsView_Direction.setObjectName("graphicsView_Direction")
+        self.dial = QtWidgets.QDial(self.centralwidget)
+        self.dial.setGeometry(QtCore.QRect(460, 630, 161, 141))
+        self.dial.setObjectName("dial")
+        self.DirectionGraphicsView = QtWidgets.QGraphicsView(self.centralwidget)
+        self.DirectionGraphicsView.setGeometry(QtCore.QRect(10, 640, 256, 192))
+        self.DirectionGraphicsView.setObjectName("DirectionGraphicsView")
+        self.quickWidget = QtQuickWidgets.QQuickWidget(self.centralwidget)
+        self.quickWidget.setGeometry(QtCore.QRect(280, 630, 141, 131))
+        self.quickWidget.setResizeMode(QtQuickWidgets.QQuickWidget.SizeRootObjectToView)
+        self.quickWidget.setSource(QtCore.QUrl("file:///data/code/python3.6/weather/full_gauge.qml"))
+        self.quickWidget.setObjectName("quickWidget")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1122, 20))
@@ -146,3 +164,6 @@ class Ui_MainWindow(object):
         self.menuRTL_Monitor.setTitle(_translate("MainWindow", "RTL Monitor"))
         self.menuLogs.setTitle(_translate("MainWindow", "Logs"))
 
+
+from PyQt5 import QtQuickWidgets
+from pyqtgraph import PlotWidget

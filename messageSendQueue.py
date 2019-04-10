@@ -3,6 +3,7 @@ import pika
 import subprocess
 import shlex
 from loguru import logger
+import time
 
 command = 'rtl_433 -q -G -F json'
 
@@ -11,15 +12,15 @@ def main():
     try:
         connection = pika.BlockingConnection(pika.ConnectionParameters('localhost', 5672))
     except Exception as e:
-        print("Error creating pika blocking connection: " + str(e))
+        logger.warning("Error creating pika blocking connection: " + str(e))
         return("Failed")
     channel = connection.channel()
-    channel.queue_declare(queue='rtl-433')
+    channel_name = channel.queue_declare(queue='rtl-433')
 
     try:
         process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE, encoding='utf8')
     except Exception as e:
-        print("Error opening subprocess: " + str(e))
+        logger.warning("Error opening subprocess: " + str(e))
         connection.close()
         return("Failed")
       
@@ -28,6 +29,8 @@ def main():
         channel.basic_publish(exchange='',
             routing_key='rtl-433',
             body=output)
+        logger.info("MessageSendData: " + str(output))
+        time.sleep(.5)
 
     connection.close()
 

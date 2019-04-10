@@ -17,5 +17,12 @@ qscintilla = "*"
 vulture = "*"
 pycodestyle = "*"
 pyrabbit = "*"
+pyqtgraph = "*"
+matplotlib = "*"
+pyside2 = "*"
+psutil = "*"
+pip = "*"
+install = "*"
+deepdiff = {extras = ["murmur"],version = "*"}
 
 [dev-packages]
