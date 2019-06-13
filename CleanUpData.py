@@ -7,18 +7,20 @@ class CleanData:
         pass
 
     def massageData(self, body):
-        print(body)
         try:
-            message = json.loads(body.decode('utf-8').replace("'",'"'))
+            message : dict = json.loads(body.decode('utf-8').replace("'",'"'))
         except Exception as e:
             print("Error: " + str(e))
             failed = {"Failed": 0, "Failed" : 0}
+            message['DetectedModelType'] = 'Nothing'
             return(failed)
 
         if 'Fine Offset Electronics WH1080/WH3080 Weather Station' in str(message):
             # logger.info("Found: " + str(message))
             rest = Open_db.loadSession(message)
+            message['DetectedModelType'] = 'WH1080/WH3080'
             return(message)
         else:
             # logger.info("Not Found: " + str(body))
+            message['DetectedModelType'] = 'Unknown'
             return(message)

@@ -3,26 +3,15 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
-[requires]
-python_version = "3.6"
+[dev-packages]
 
 [packages]
-"pyqt5" = "*"
-"flake8" = "*"
+pyqt5 = "*"
 sqlalchemy = "*"
-loguru = "*"
 pika = "*"
-jsonlines = "*"
-qscintilla = "*"
-vulture = "*"
-pycodestyle = "*"
-pyrabbit = "*"
 pyqtgraph = "*"
-matplotlib = "*"
-pyside2 = "*"
-psutil = "*"
-pip = "*"
-install = "*"
-deepdiff = {extras = ["murmur"],version = "*"}
+loguru = "*"
+jsonlines = "*"
 
-[dev-packages]
+[requires]
+python_version = "3.6"

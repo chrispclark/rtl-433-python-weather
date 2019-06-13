@@ -1,6 +1,8 @@
 import sys
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
+from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtWidgets import QApplication, QComboBox, QDateEdit, QDateTimeEdit, QDoubleSpinBox, QGroupBox, QHBoxLayout, QLabel, QSpinBox, QTimeEdit, QVBoxLayout, QWidget
 
 class CompassWidget(QWidget):
 
@@ -90,7 +92,7 @@ class CompassWidget(QWidget):
     def angle(self):
         return self._angle
     
-    @pyqtSlot(float)
+    @pyqtSlot(int)
     def setAngle(self, angle):
     
         if angle != self._angle:

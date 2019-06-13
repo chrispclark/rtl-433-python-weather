@@ -29,6 +29,7 @@ class Clean:
             returnDict = insertData(self, data, valueWeather)
         logger.info("Dict: " + str(returnDict))
 
+        logger.info(data + str(type(data)))
         return(data, counter)
 
 

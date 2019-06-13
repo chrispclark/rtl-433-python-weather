@@ -1,0 +1,31 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[requires]
+python_version = "3.6"
+
+[packages]
+"pyqt5" = "*"
+"flake8" = "*"
+sqlalchemy = "*"
+loguru = "*"
+pika = "*"
+jsonlines = "*"
+qscintilla = "*"
+vulture = "*"
+pycodestyle = "*"
+pyrabbit = "*"
+pyqtgraph = "*"
+psutil = "*"
+pip = "*"
+install = "*"
+deepdiff = {extras = ["murmur"],version = "*"}
+progressbar2 = "*"
+email-to = "*"
+smtplib = "*"
+python-emails = "*"
+
+[dev-packages]
+pylint = "*"

@@ -1,0 +1,49 @@
+deepdiff==4.0.6
+  - jsonpickle [required: >=1.0, installed: 1.2]
+  - ordered-set [required: >=3.1, installed: 3.1.1]
+email-to==0.1.0
+  - markdown [required: Any, installed: 3.1.1]
+    - setuptools [required: >=36, installed: 41.0.1]
+  - premailer [required: Any, installed: 3.4.1]
+    - cachetools [required: Any, installed: 3.1.1]
+    - cssselect [required: Any, installed: 1.0.3]
+    - cssutils [required: Any, installed: 1.0.2]
+    - lxml [required: Any, installed: 4.3.3]
+    - requests [required: Any, installed: 2.22.0]
+      - certifi [required: >=2017.4.17, installed: 2019.3.9]
+      - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+      - idna [required: >=2.5,<2.9, installed: 2.8]
+      - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
+flake8==3.7.7
+  - entrypoints [required: >=0.3.0,<0.4.0, installed: 0.3]
+  - mccabe [required: >=0.6.0,<0.7.0, installed: 0.6.1]
+  - pycodestyle [required: >=2.5.0,<2.6.0, installed: 2.5.0]
+  - pyflakes [required: >=2.1.0,<2.2.0, installed: 2.1.1]
+jsonlines==1.2.0
+  - six [required: Any, installed: 1.12.0]
+kiwisolver==1.0.1
+  - setuptools [required: Any, installed: 41.0.1]
+loguru==0.2.5
+  - ansimarkup [required: >=1.4.0, installed: 1.4.0]
+    - colorama [required: Any, installed: 0.4.1]
+  - better-exceptions-fork [required: >=0.2.1.post6, installed: 0.2.1.post6]
+    - ansimarkup [required: >=1.3.0, installed: 1.4.0]
+      - colorama [required: Any, installed: 0.4.1]
+    - pygments [required: >=2.2.0, installed: 2.3.1]
+  - colorama [required: >=0.3.4, installed: 0.4.1]
+mmh3==2.5.1
+pika==1.0.1
+psutil==5.6.2
+pyparsing==2.3.1
+pyqtgraph==0.10.0
+  - numpy [required: Any, installed: 1.16.2]
+pyrabbit==1.1.0
+  - httplib2 [required: Any, installed: 0.12.1]
+python-utils==2.3.0
+  - six [required: Any, installed: 1.12.0]
+QScintilla==2.11.1
+  - PyQt5 [required: >=5.10.1, installed: 5.12.2]
+    - PyQt5-sip [required: >=4.19.14,<13, installed: 4.19.15]
+shiboken2==5.12.2
+SQLAlchemy==1.3.4
+vulture==1.0

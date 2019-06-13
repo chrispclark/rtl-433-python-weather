@@ -27,6 +27,17 @@ def returnTemp():
     '''
     return(restemperature_c)
 
+def returnRain():
+    session = loadSessionResults()
+    resrain = session.query(WeatherStationData.rain).all()
+    resrain = [value for value, in resrain]
+    '''
+    for x in range(len(res)):
+        #print(x)
+        print(res[x].temperature_C,  ' ' , end='')
+    '''
+    return(resrain)
+
 
 
 if __name__ == "__main__":
