@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Session SYSTEM "Session-6.2.dtd">
+<!-- This file was generated automatically, do not edit. -->
+<!-- Saved: 2019-11-21, 14:45:26 -->
+<Session version="6.2">
+  <Project>/data/code/python3.6/new_weather/new-weather.e4p</Project>
+  <ViewManagerSplits count="1" orientation="2"/>
+  <Filenames>
+    <Filename cline="0" cindex="0" folds="" zoom="0" cloned="0" splitindex="0" editorindex="0">/data/code/python3.6/new_weather/new_weather/main.py</Filename>
+  </Filenames>
+  <ActiveWindow cline="0" cindex="0">/data/code/python3.6/new_weather/new_weather/main.py</ActiveWindow>
+  <Breakpoints/>
+  <Watchexpressions/>
+  <DebugInfo>
+    <VirtualEnv>&lt;default&gt;</VirtualEnv>
+    <CommandLine></CommandLine>
+    <WorkingDirectory>/data/code/python3.6/new_weather/new_weather</WorkingDirectory>
+    <Environment></Environment>
+    <ReportExceptions value="True"/>
+    <Exceptions/>
+    <IgnoredExceptions/>
+    <AutoClearShell value="True"/>
+    <TracePython value="False"/>
+    <AutoContinue value="True"/>
+    <CovexcPattern/>
+  </DebugInfo>
+  <Bookmarks/>
+</Session>
